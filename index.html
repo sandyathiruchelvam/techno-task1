@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+<div class="container">
+    <h1>Login</h1>
+    <form>
+        <div class="form-group">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+        </div>
+        <P>forgot password?</P>
+        <div class="form-group">
+            <button type="button" onclick="checkLogin()">Login</button>
+            <h4 id="idresult"></h4>
+        </div>
+    </form>
+    <script>
+        var jsresult = document.getElementById("idresult");
+        function checkLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (password !== "your_correct_password") {
+                jsresult.textContent = "Your password is wrong";
+            } 
+        }
+    </script>
+</body>
+</html>
